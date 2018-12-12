@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Properties;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.openxml4j.exceptions.InvalidFormatException;
@@ -18,16 +19,35 @@ import com.crm.qa.base.TestBase;
 
 public class TestUtil extends TestBase {
 
+	/*public TestUtil(){
+		try {
+			prop = new Properties();
+			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/crm"
+					+ "/qa/config/config.properties");
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}*/
+	
 	public static long PAGE_LOAD_TIMEOUT = 20;
 	public static long IMPLICIT_WAIT = 20;
+	
 
+	static String TestData = prop.getProperty("TestData");
+	
 	public static String TESTDATA_SHEET_PATH = "/Users/myair/Documents/MehdiWork/GIT/PageObjectModel-master"
 			+ "/src/main/java/com/crm/qa/testdata/FreeCrmTestData.xlsx";
+	
+	//public static String TESTDATA_SHEET_PATH = TestData;
 
 	static Workbook book;
 	static Sheet sheet;
 	static JavascriptExecutor js;
 
+	
 	public void switchToFrame() {
 		driver.switchTo().frame("mainpanel");
 	}

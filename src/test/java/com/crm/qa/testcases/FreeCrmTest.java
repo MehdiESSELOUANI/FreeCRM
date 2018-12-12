@@ -73,10 +73,7 @@ public class FreeCrmTest {
 			js.executeScript("$.growl.warning({ title: 'Warning!', message: '"+message+"' });");
 		}
 
-		// jquery-growl w/ colorized output
-//		js.executeScript("$.growl.error({ title: 'ERROR', message: 'Some exception is coming' });");
-//		js.executeScript("$.growl.notice({ title: 'Notice', message: 'your notice message goes here' });");
-//		js.executeScript("$.growl.warning({ title: 'Warning!', message: 'your warning message goes here' });");
+		
 	}
 	
 	public static void takeScreenshot(String fileName) throws IOException{
@@ -84,7 +81,7 @@ public class FreeCrmTest {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		// now copy the screenshot to desired location using copyFile //method
 		FileUtils.copyFile(src, 
-				new File("/Users/myair/Documents/MehdiWork/PageObjectModel-master/screenshots" + fileName +".png"));
+				new File("/Users/myair/Documents/GitHub/FreeCRM/screenshots" + fileName +".png"));
 
 	}
 

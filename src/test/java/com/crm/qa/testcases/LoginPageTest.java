@@ -29,7 +29,7 @@ public class LoginPageTest extends TestBase{
 		System.out.println("***********");
 		System.out.println(title);
 		System.out.println("***********");
-		Assert.assertEquals(title, "#1 Free CRM for Any Business: Online Customer Relationship Software");
+		Assert.assertEquals(title, "#1 Free CRM software in the cloud for sales and service");
 	}
 	
 	@Test(priority=2)

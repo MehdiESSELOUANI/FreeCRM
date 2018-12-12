@@ -61,13 +61,13 @@ public class ContactsPageTest extends TestBase{
 	
 	@Test(priority=2)
 	public void selectSingleContactsTest(){
-		contactsPage.selectContactsByName("test2 test2");
+		contactsPage.selectContactsByName("David Cris");
 	}
 	
 	@Test(priority=3)
 	public void selectMultipleContactsTest(){
-		contactsPage.selectContactsByName("test2 test2");
-		contactsPage.selectContactsByName("ui uiii");
+		contactsPage.selectContactsByName("David Cris");
+		contactsPage.selectContactsByName("Tom Peter");
 
 	}
 	
@@ -81,7 +81,6 @@ public class ContactsPageTest extends TestBase{
 	@Test(priority=4, dataProvider="getCRMTestData")
 	public void validateCreateNewContact(String title, String firstName, String lastName, String company){
 		homePage.clickOnNewContactLink();
-		//contactsPage.createNewContact("Mr.", "Tom", "Peter", "Google");
 		contactsPage.createNewContact(title, firstName, lastName, company);
 		
 	}

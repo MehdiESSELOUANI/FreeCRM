@@ -39,14 +39,14 @@ public class TestBase {
 	
 	public static void initialization(){
 		String browserName = prop.getProperty("browser");
+		String driverPath = prop.getProperty("driver");
 		
 		if(browserName.equals("chrome")){
-			System.setProperty("webdriver.chrome.driver", "//Users//myair//Documents//MehdiWork//4d-tests//src"
-					+ "//main//resources//drivers//chromedriver");	
+			System.setProperty("webdriver.chrome.driver",driverPath);	
 			driver = new ChromeDriver(); 
 		}
 		else if(browserName.equals("FF")){
-			System.setProperty("webdriver.gecko.driver", "/Users/naveenkhunteta/Documents/SeleniumServer/geckodriver");	
+			System.setProperty("webdriver.gecko.driver", driverPath);	
 			driver = new FirefoxDriver(); 
 		}
 		
