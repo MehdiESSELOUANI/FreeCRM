@@ -38,8 +38,12 @@ public class TestUtil extends TestBase {
 
 	static String TestData = prop.getProperty("TestData");
 	
-	public static String TESTDATA_SHEET_PATH = "/Users/myair/Documents/MehdiWork/GIT/PageObjectModel-master"
-			+ "/src/main/java/com/crm/qa/testdata/FreeCrmTestData.xlsx";
+	//public static String TESTDATA_SHEET_PATH = "/Users/myair/Documents/MehdiWork/GIT/PageObjectModel-master"
+	//		+ "/src/main/java/com/crm/qa/testdata/FreeCrmTestData.xlsx";
+	
+	public static String TESTDATA_SHEET_PATH = System.getProperty("user.dir")+ "/src/main/java/com/crm/"
+			+ "qa/testdata/FreeCrmTestData.xlsx";
+	
 	
 	//public static String TESTDATA_SHEET_PATH = TestData;
 
