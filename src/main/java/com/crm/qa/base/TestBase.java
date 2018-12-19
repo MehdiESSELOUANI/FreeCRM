@@ -23,7 +23,7 @@ public class TestBase {
 	public  static EventFiringWebDriver e_driver;
 	public static WebEventListener eventListener;
 	
-	public TestBase(){
+	static {
 		try {
 			prop = new Properties();
 			FileInputStream ip = new FileInputStream(System.getProperty("user.dir")+ "/src/main/java/com/crm"
@@ -34,6 +34,9 @@ public class TestBase {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public TestBase(){
 	}
 	
 	

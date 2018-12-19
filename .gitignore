@@ -1,0 +1,10 @@
+/target/
+.settings/org.eclipse.core.resources.prefs
+*.png
+.classpath
+.DS_Store
+*.prefs
+src/main/java/com/crm/qa/pages/LoginPage.java
+src/main/java/com/crm/qa/pages/LoginPage.java
+*.html
+.project

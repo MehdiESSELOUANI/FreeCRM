@@ -59,7 +59,7 @@ public class TestUtil extends TestBase {
 	public static Object[][] getTestData(String sheetName) {
 		FileInputStream file = null;
 		try {
-			file = new FileInputStream(TESTDATA_SHEET_PATH);
+			file = new FileInputStream(TestData);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
